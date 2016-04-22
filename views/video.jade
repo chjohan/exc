@@ -1,0 +1,43 @@
+extends layout
+
+block curChan
+    nav.cur-chan
+        ul
+            li
+                a.chan-link(href='/humour') Humour
+                ul
+                    li
+                        a.chan-link(href='/news') News
+                    li
+                        a.chan-link(href='/gaming') Gaming
+                    li
+                        a.chan-link(href='/cute') Cute
+                    li
+                        a.chan-link(href='/history') History
+                    li
+                        a.chan-link(href='/top') Top
+
+block content
+    .plyr.js-plyr
+        div(data-video-id= sources[0].src, data-type= sources[0].type)
+    #video-info
+        h1= title
+        h3#video-category= category
+        p= description
+    script(src='/javascripts/plyr.js')
+    script.
+        plyr.setup();
+    script.
+        (function(d, p){
+            var a = new XMLHttpRequest(),
+            b = d.body;
+            a.open('GET', p, true);
+            a.send();
+            a.onload = function() {
+                var c = d.createElement('div');
+                c.setAttribute('hidden', '');
+                c.innerHTML = a.responseText;
+                b.insertBefore(c, b.childNodes[0]);
+            };
+        })(document, '/images/sprite.svg');
+    script(src='/javascripts/global.js')

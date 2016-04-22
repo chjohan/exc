@@ -1,5 +1,98 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    #slogan-container
+        h1 Videos categorized, picked and refined for your pleassure.
+        h1.sub Choose a category to start a channel.
+    #categories-container
+        #categories
+            .unit
+                a(href='humour')
+                    .inner
+                        .bd
+                            span.category-icon#humour-icon
+                            span.category-title Humour
+            .unit
+                a(href='#')
+                    .inner
+                        .bd
+                            span.category-icon#news-icon
+                            span.category-title News
+            .unit
+                a(href='#')
+                    .inner
+                        .bd
+                            span.category-icon#top-icon
+                            span.category-title Top
+            .unit
+                a(href='#')
+                    .inner
+                        .bd
+                            span.category-icon#fresh-icon
+                            span.category-title Fresh
+            .unit
+                a(href='#')
+                    .inner
+                        .bd
+                            span.category-icon#gaming-icon
+                            span.category-title Gaming
+            .unit
+                a(href='#')
+                    .inner
+                        .bd
+                            span.category-icon#cute-icon
+                            span.category-title Cute
+            .unit
+                a(href='#')
+                    .inner
+                        .bd
+                            span.category-icon#science-icon
+                            span.category-title Science
+            .unit
+                a(href='#')
+                    .inner
+                        .bd
+                            span.category-icon#music-videos-icon
+                            span.category-title Music
+            .unit
+                a(href='#')
+                    .inner
+                        .bd
+                            span.category-icon#documentary-icon
+                            span.category-title Entertainment
+            .unit
+                a(href='#')
+                    .inner
+                        .bd
+                            span.category-icon#wildlife-icon
+                            span.category-title Nature &amp; Wildlife
+            .unit
+                a(href='#')
+                    .inner
+                        .bd
+                            span.category-icon#history-icon
+                            span.category-title History
+            .unit
+                a(href='#')
+                    .inner
+                        .bd
+                            span.category-icon#sports-icon
+                            span.category-title Sports
+        #sidebar
+            .unit-full
+                .inner
+                    h3 Welcome to the alfa version of Tubify
+                    .media
+                        p Tubify aims to deliver fresh and continous content to create the modern TV-channel of the internet.
+                    .media
+                        p
+                            | Choose a category to get started or 
+                            a(href='#') sign up
+                            |  to start cusomizing your own channel.
+            .unit-full
+                .inner
+                    h3 Featured video of the day
+                    .media
+                        img(src='https://i.vimeocdn.com/video/541101033.jpg?mw=355&mh=710')
+                    .media
+                        p Surfing is awesome!
